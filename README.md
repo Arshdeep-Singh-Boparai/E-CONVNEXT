@@ -1,4 +1,4 @@
-# [An efficient ConvNeXt-T evaluation on CIFAR-10 and Tiny ImageNet]
+# An efficient ConvNeXt-T evaluation on CIFAR-10 and Tiny ImageNet
 
 
 We propose **Efficient ConvNeXt**[1], an efficient version of ConvNeXt [2] model. We apply operator-norm based filter pruning approach. Efficient ConvNeXt is accurate, more  efficient (with reduced parameter count and computations) than that of ConvNeXt. We provide efficient ConvNeXt-T model checkpoints to use the efficient version along with the 
@@ -178,7 +178,7 @@ This repository is built using the [ConvNeXt](https://github.com/facebookresearc
 ## Citation
 If you find this repository helpful, please consider citing:
 ```
-@Article{liu2022convnet,
+@Article{Singh2023efficient,
   author  = {Arshdeep Singh, Mark D Plumbley},
   title   = {Efficient CNNs via passive filter pruning},
   journal = {arXiv preprint arXiv:2304.02319},
