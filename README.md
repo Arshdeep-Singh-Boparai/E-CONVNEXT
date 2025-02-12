@@ -30,6 +30,18 @@ Downloads the dataset, checkpoints from [this link](https://zenodo.org/records/1
 ## Evaluation on CIFAR-10 dataset for various pruned models, unpruned models
 Once the dataset, checkpoints are downloaded, use below instructions to reproduce the results with '~/script/eval_convnext.sh'.
 
+```
+python main.py --model convnext_tiny_unpruned_cifar10 --eval true \
+--resume /path/to/checkpoint/cifar10/unpruned_checkpoint-best.pth \
+--input_size 224 --drop_path 0 \
+--data_path /path/to/dataset/CIFAR-10/ \
+--eval_data_path /path/to/dataset/CIFAR-10/val \
+```
+This should give 
+```
+* Acc@1 95.700 Acc@5 99.890 loss 0.210
+```
+
 
 ```
 python main.py --model convnext_tiny_21M_pruned_cifar10 --eval true \
