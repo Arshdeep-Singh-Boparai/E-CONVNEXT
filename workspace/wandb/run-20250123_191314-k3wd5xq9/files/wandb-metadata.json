@@ -1,0 +1,74 @@
+{
+  "os": "Linux-5.8.0-63-generic-x86_64-with-glibc2.17",
+  "python": "CPython 3.8.20",
+  "startedAt": "2025-01-23T19:13:14.533256Z",
+  "args": [
+    "--epochs",
+    "10",
+    "--model",
+    "convnext_tiny",
+    "--data_set",
+    "image_folder",
+    "--data_path",
+    "/home/arshdeep/ConvNeXt/CIFAR-10-images-master/train",
+    "--eval_data_path",
+    "/home/arshdeep/ConvNeXt/CIFAR-10-images-master/test",
+    "--nb_classes",
+    "10",
+    "--num_workers",
+    "8",
+    "--warmup_epochs",
+    "0",
+    "--save_ckpt",
+    "true",
+    "--output_dir",
+    "model_ckpt",
+    "--finetune",
+    "/home/arshdeep/ConvNeXt/checkpoints/convnext_tiny_1k_224_ema.pth",
+    "--cutmix",
+    "0",
+    "--mixup",
+    "0",
+    "--lr",
+    "4e-4",
+    "--enable_wandb",
+    "true",
+    "--wandb_ckpt",
+    "true"
+  ],
+  "program": "/home/arshdeep/ConvNeXt/main.py",
+  "codePath": "main.py",
+  "git": {
+    "remote": "https://github.com/facebookresearch/ConvNeXt",
+    "commit": "048efcea897d999aed302f2639b6270aedf8d4c8"
+  },
+  "email": "boparaiarshdeep@gmail.com",
+  "root": "/home/arshdeep/ConvNeXt/workspace",
+  "host": "marc1701-G5-5500",
+  "executable": "/home/arshdeep/anaconda3/envs/convnext/bin/python",
+  "cpu_count": 6,
+  "cpu_count_logical": 12,
+  "gpu": "GeForce RTX 2070 with Max-Q Design",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "1006530654208",
+      "used": "934503907328"
+    }
+  },
+  "memory": {
+    "total": "16537755648"
+  },
+  "cpu": {
+    "count": 6,
+    "countLogical": 12
+  },
+  "gpu_nvidia": [
+    {
+      "name": "GeForce RTX 2070 with Max-Q Design",
+      "memoryTotal": "8370061312",
+      "architecture": "Turing"
+    }
+  ],
+  "cudaVersion": "11.2"
+}

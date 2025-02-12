@@ -1,0 +1,23 @@
+2025-01-23 18:59:54,382 INFO    MainThread:182812 [wandb_setup.py:_flush():68] Current SDK version is 0.19.4
+2025-01-23 18:59:54,382 INFO    MainThread:182812 [wandb_setup.py:_flush():68] Configure stats pid to 182812
+2025-01-23 18:59:54,382 INFO    MainThread:182812 [wandb_setup.py:_flush():68] Loading settings from /home/arshdeep/.config/wandb/settings
+2025-01-23 18:59:54,382 INFO    MainThread:182812 [wandb_setup.py:_flush():68] Loading settings from /home/arshdeep/ConvNeXt/workspace/wandb/settings
+2025-01-23 18:59:54,382 INFO    MainThread:182812 [wandb_setup.py:_flush():68] Loading settings from environment variables
+2025-01-23 18:59:54,383 INFO    MainThread:182812 [wandb_init.py:setup_run_log_directory():624] Logging user logs to /home/arshdeep/ConvNeXt/workspace/wandb/run-20250123_185954-v5z7jexe/logs/debug.log
+2025-01-23 18:59:54,383 INFO    MainThread:182812 [wandb_init.py:setup_run_log_directory():625] Logging internal logs to /home/arshdeep/ConvNeXt/workspace/wandb/run-20250123_185954-v5z7jexe/logs/debug-internal.log
+2025-01-23 18:59:54,383 INFO    MainThread:182812 [wandb_init.py:init():743] calling init triggers
+2025-01-23 18:59:54,383 INFO    MainThread:182812 [wandb_init.py:init():748] wandb.init called with sweep_config: {}
+config: {'batch_size': 64, 'epochs': 10, 'update_freq': 1, 'model': 'convnext_tiny', 'drop_path': 0, 'input_size': 224, 'layer_scale_init_value': 1e-06, 'model_ema': False, 'model_ema_decay': 0.9999, 'model_ema_force_cpu': False, 'model_ema_eval': False, 'opt': 'adamw', 'opt_eps': 1e-08, 'opt_betas': None, 'clip_grad': None, 'momentum': 0.9, 'weight_decay': 0.05, 'weight_decay_end': None, 'lr': 0.0004, 'layer_decay': 1.0, 'min_lr': 1e-06, 'warmup_epochs': 0, 'warmup_steps': -1, 'color_jitter': 0.4, 'aa': 'rand-m9-mstd0.5-inc1', 'smoothing': 0.1, 'train_interpolation': 'bicubic', 'crop_pct': 0.875, 'reprob': 0.25, 'remode': 'pixel', 'recount': 1, 'resplit': False, 'mixup': 0.0, 'cutmix': 0.0, 'cutmix_minmax': None, 'mixup_prob': 1.0, 'mixup_switch_prob': 0.5, 'mixup_mode': 'batch', 'finetune': '/home/arshdeep/ConvNeXt/checkpoints/convnext_tiny_1k_224_ema.pth', 'head_init_scale': 1.0, 'model_key': 'model|module', 'model_prefix': '', 'data_path': '/home/arshdeep/ConvNeXt/CIFAR-10-images-master/train', 'eval_data_path': '/home/arshdeep/ConvNeXt/CIFAR-10-images-master/test', 'nb_classes': 10, 'imagenet_default_mean_and_std': True, 'data_set': 'image_folder', 'output_dir': 'model_ckpt', 'log_dir': None, 'device': 'cuda', 'seed': 0, 'resume': '', 'auto_resume': True, 'save_ckpt': True, 'save_ckpt_freq': 1, 'save_ckpt_num': 3, 'start_epoch': 0, 'eval': False, 'dist_eval': True, 'disable_eval': False, 'num_workers': 8, 'pin_mem': True, 'world_size': 1, 'local_rank': -1, 'dist_on_itp': False, 'dist_url': 'env://', 'use_amp': False, 'enable_wandb': True, 'project': 'convnext', 'wandb_ckpt': True, 'distributed': False}
+2025-01-23 18:59:54,383 INFO    MainThread:182812 [wandb_init.py:init():776] starting backend
+2025-01-23 18:59:54,604 INFO    MainThread:182812 [wandb_init.py:init():780] sending inform_init request
+2025-01-23 18:59:54,634 INFO    MainThread:182812 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-01-23 18:59:54,635 INFO    MainThread:182812 [wandb_init.py:init():795] backend started and connected
+2025-01-23 18:59:54,636 INFO    MainThread:182812 [wandb_init.py:init():888] updated telemetry
+2025-01-23 18:59:54,657 INFO    MainThread:182812 [wandb_init.py:init():915] communicating run to backend with 90.0 second timeout
+2025-01-23 18:59:55,100 INFO    MainThread:182812 [wandb_init.py:init():967] starting run threads in backend
+2025-01-23 18:59:55,258 INFO    MainThread:182812 [wandb_run.py:_console_start():2409] atexit reg
+2025-01-23 18:59:55,259 INFO    MainThread:182812 [wandb_run.py:_redirect():2259] redirect: wrap_raw
+2025-01-23 18:59:55,259 INFO    MainThread:182812 [wandb_run.py:_redirect():2324] Wrapping output streams.
+2025-01-23 18:59:55,259 INFO    MainThread:182812 [wandb_run.py:_redirect():2349] Redirects installed.
+2025-01-23 18:59:55,260 INFO    MainThread:182812 [wandb_init.py:init():1009] run started, returning control to user process
+2025-01-23 18:59:55,752 WARNING MsgRouterThr:182812 [router.py:message_loop():75] message_loop has been closed

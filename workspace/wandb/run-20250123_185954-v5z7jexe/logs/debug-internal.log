@@ -1,0 +1,15 @@
+{"time":"2025-01-23T18:59:54.63742096Z","level":"INFO","msg":"stream: starting","core version":"0.19.4","symlink path":"/home/arshdeep/ConvNeXt/workspace/wandb/run-20250123_185954-v5z7jexe/logs/debug-core.log"}
+{"time":"2025-01-23T18:59:54.748104328Z","level":"INFO","msg":"created new stream","id":"v5z7jexe"}
+{"time":"2025-01-23T18:59:54.748193674Z","level":"INFO","msg":"stream: started","id":"v5z7jexe"}
+{"time":"2025-01-23T18:59:54.748324316Z","level":"INFO","msg":"handler: started","stream_id":"v5z7jexe"}
+{"time":"2025-01-23T18:59:54.748666504Z","level":"INFO","msg":"writer: Do: started","stream_id":"v5z7jexe"}
+{"time":"2025-01-23T18:59:54.74899493Z","level":"INFO","msg":"sender: started","stream_id":"v5z7jexe"}
+{"time":"2025-01-23T18:59:55.110944546Z","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-23T18:59:55.7521741Z","level":"INFO","msg":"stream: closing","id":"v5z7jexe"}
+{"time":"2025-01-23T18:59:55.752200149Z","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-23T18:59:55.752544469Z","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-23T18:59:56.281151028Z","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-23T18:59:56.529270705Z","level":"INFO","msg":"handler: closed","stream_id":"v5z7jexe"}
+{"time":"2025-01-23T18:59:56.529366149Z","level":"INFO","msg":"sender: closed","stream_id":"v5z7jexe"}
+{"time":"2025-01-23T18:59:56.529337301Z","level":"INFO","msg":"writer: Close: closed","stream_id":"v5z7jexe"}
+{"time":"2025-01-23T18:59:56.52957878Z","level":"INFO","msg":"stream: closed","id":"v5z7jexe"}
