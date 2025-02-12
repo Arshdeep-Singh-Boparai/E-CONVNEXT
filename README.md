@@ -83,10 +83,10 @@ This should give
 ## Evaluation on Tiny ImageNet dataset for various pruned models, unpruned models
 ```
 python main.py --model convnext_tiny_unpruned_tinyimagenet --eval true \
---resume /home/arshdeep/ConvNeXt/github_checkpoints/tinyimage/unpruned_checkpoint-best.pth \
+--resume /path/to/checkpoint/tinyimage/unpruned_checkpoint-best.pth \
 --input_size 224 --drop_path 0 \
---data_path /home/arshdeep/ConvNeXt/dataset/TinyImageNet_dataset/ \
---eval_data_path /home/arshdeep/ConvNeXt/dataset/TinyImageNet_dataset/val \
+--data_path /path/to/dataset/TinyImageNet_dataset/ \
+--eval_data_path /path/to/dataset/TinyImageNet_dataset/val \
 ```
 
 This should give 
