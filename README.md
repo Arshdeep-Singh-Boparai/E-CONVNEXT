@@ -23,7 +23,7 @@ Please check [INSTALL.md](INSTALL.md) for installation instructions.
 
 
 ## Checkpoints
-Downloads the dataset, checkpoints from [this link]().
+Downloads the dataset, checkpoints from [this link](https://doi.org/10.5281/zenodo.14861717).
 
 
 
