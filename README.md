@@ -28,7 +28,7 @@ Downloads the dataset, checkpoints from [this link](https://zenodo.org/records/1
 
 
 ## Evaluation on CIFAR-10 dataset for various pruned models, unpruned models
-Once the dataset, checkpoitns are downloaded, use below instructions to reproduce the results with '~/script/eval_convnext.sh'.
+Once the dataset, checkpoints are downloaded, use below instructions to reproduce the results with '~/script/eval_convnext.sh'.
 
 
 ```
