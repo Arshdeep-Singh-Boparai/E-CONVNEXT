@@ -6,8 +6,8 @@ We propose **Efficient ConvNeXt**[1], an efficient version of ConvNeXt [2] model
 
 
 [1]  [Efficient CNNs via Passive Fitler Pruning](https://arxiv.org/pdf/2304.02319). Under review in IEEE TASLP.\
-[Arshdeep Singh](https://www.surrey.ac.uk/people/arshdeep-singh), [Mark D PLumbley](https://www.surrey.ac.uk/people/mark-plumbley)\
-[CVSSP](https://www.surrey.ac.uk/centre-vision-speech-signal-processing), University of Surrey, UK\
+[Arshdeep Singh](https://www.surrey.ac.uk/people/arshdeep-singh), [Mark D Plumbley](https://www.surrey.ac.uk/people/mark-plumbley)\
+[CVSSP](https://www.surrey.ac.uk/centre-vision-speech-signal-processing), University of Surrey, UK 
 
 
 [2] [A ConvNet for the 2020s](https://arxiv.org/abs/2201.03545). CVPR 2022.\
@@ -180,7 +180,7 @@ This should give
 See [TRAINING.md](TRAINING.md) for training and fine-tuning instructions, as suggested by [ConvNeXt](https://github.com/facebookresearch/ConvNeXt/tree/main?tab=readme-ov-file) repository.
 
 ## Pruning
-For pruning algorithm, see [pruning.md](pruning.md)
+For pruning algorithm, see [pruning.md](pruning.md) [will be updated soon]
 
 
 
