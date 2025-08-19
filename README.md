@@ -5,7 +5,7 @@ We propose **Efficient ConvNeXt**[1], an efficient version of ConvNeXt [2] model
 [[ConvNeXt](https://github.com/facebookresearch/ConvNeXt/tree/main?tab=readme-ov-file) repository]. For the repostiory setup, please follow [2].
 
 
-[1]  [Efficient CNNs via Passive Fitler Pruning](https://arxiv.org/pdf/2304.02319). Under review in IEEE TASLP.\
+[1]  [Efficient CNNs via Passive Fitler Pruning](10.1109/TASLPRO.2025.3561589). in IEEE Transactions on Audio, Speech and Language Processing, vol. 33, pp. 1763-1774, 2025, doi: 10.1109/TASLPRO.2025.3561589.\
 [Arshdeep Singh](https://www.surrey.ac.uk/people/arshdeep-singh), [Mark D Plumbley](https://www.surrey.ac.uk/people/mark-plumbley)\
 [CVSSP](https://www.surrey.ac.uk/centre-vision-speech-signal-processing), University of Surrey, UK 
 
