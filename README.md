@@ -1,204 +1,114 @@
-# An efficient ConvNeXt-T evaluation on CIFAR-10 and Tiny ImageNet
+# Efficient ConvNeXt-T: Evaluation on CIFAR-10 and Tiny ImageNet
 
+We introduce **Efficient ConvNeXt** [1], an efficient variant of ConvNeXt [2], obtained via an operator-norm-based filter pruning approach. Efficient ConvNeXt achieves competitive accuracy while significantly reducing parameter count and computational cost compared to the original ConvNeXt.  
 
-We propose **Efficient ConvNeXt**[1], an efficient version of ConvNeXt [2] model. We apply operator-norm based filter pruning approach. Efficient ConvNeXt is accurate, more  efficient (with reduced parameter count and computations) than that of ConvNeXt. We provide efficient ConvNeXt-T model checkpoints to use the efficient version along with the 
-[[ConvNeXt](https://github.com/facebookresearch/ConvNeXt/tree/main?tab=readme-ov-file) repository]. For the repostiory setup, please follow [2].
+This repository provides checkpoints of Efficient ConvNeXt-T, enabling direct use of the efficient models alongside the official [ConvNeXt repository](https://github.com/facebookresearch/ConvNeXt/tree/main). For repository setup, please follow the instructions in [2].
 
+---
 
-[1]  [Efficient CNNs via Passive Fitler Pruning](https://ieeexplore.ieee.org/document/10966165). in IEEE Transactions on Audio, Speech and Language Processing, vol. 33, pp. 1763-1774, 2025, doi: 10.1109/TASLPRO.2025.3561589.\
-[Arshdeep Singh](https://www.surrey.ac.uk/people/arshdeep-singh), [Mark D Plumbley](https://www.surrey.ac.uk/people/mark-plumbley)\
-[CVSSP](https://www.surrey.ac.uk/centre-vision-speech-signal-processing), University of Surrey, UK 
+## 🔗 References
+- **Efficient ConvNeXt (Ours):** [Efficient CNNs via Passive Filter Pruning](https://ieeexplore.ieee.org/document/10966165), *IEEE/ACM Transactions on Audio, Speech, and Language Processing*, 2025.  
+  [Arshdeep Singh](https://www.surrey.ac.uk/people/arshdeep-singh), [Mark D. Plumbley](https://www.surrey.ac.uk/people/mark-plumbley)  
+  [CVSSP](https://www.surrey.ac.uk/centre-vision-speech-signal-processing), University of Surrey, UK  
 
+- **ConvNeXt (Baseline):** [A ConvNet for the 2020s](https://arxiv.org/abs/2201.03545), CVPR 2022.  
+  [Zhuang Liu](https://liuzhuang13.github.io), [Hanzi Mao](https://hanzimao.me/), [Chao-Yuan Wu](https://chaoyuan.org/), [Christoph Feichtenhofer](https://feichtenhofer.github.io/), [Trevor Darrell](https://people.eecs.berkeley.edu/~trevor/), [Saining Xie](https://sainingxie.com)  
 
-[2] [A ConvNet for the 2020s](https://arxiv.org/abs/2201.03545). CVPR 2022.\
-[Zhuang Liu](https://liuzhuang13.github.io), [Hanzi Mao](https://hanzimao.me/), [Chao-Yuan Wu](https://chaoyuan.org/), [Christoph Feichtenhofer](https://feichtenhofer.github.io/), [Trevor Darrell](https://people.eecs.berkeley.edu/~trevor/) and [Saining Xie](https://sainingxie.com)\
-Facebook AI Research, UC Berkeley\
-[[`arXiv`](https://arxiv.org/abs/2201.03545)][[`video`](https://www.youtube.com/watch?v=QzCjXqFnWPE)]
+---
 
+## ⚙️ Installation
+Please refer to [INSTALL.md](INSTALL.md) for detailed installation instructions.  
 
+---
 
+## 📥 Checkpoints and Datasets
+All checkpoints and datasets can be downloaded from [Zenodo](https://zenodo.org/records/14861717).  
 
-## Installation
-Please check [INSTALL.md](INSTALL.md) for installation instructions. 
+- CIFAR-10 checkpoints (unpruned and pruned versions)  
+- Tiny ImageNet checkpoints (unpruned and pruned versions)  
 
+---
 
-## Checkpoints
-Downloads the dataset, checkpoints from [this link](https://zenodo.org/records/14861717).
+## 📊 Evaluation
 
+### Evaluation on **CIFAR-10**
+Once the dataset and checkpoints are downloaded, you can reproduce results using the provided script:  
 
-
-## Evaluation on CIFAR-10 dataset for various pruned models, unpruned models
-Once the dataset, checkpoints are downloaded, use below instructions to reproduce the results with '~/script/eval_convnext.sh'.
-
-```
-python main.py --model convnext_tiny_unpruned_cifar10 --eval true \
---resume /path/to/checkpoint/cifar10/unpruned_checkpoint-best.pth \
---input_size 224 --drop_path 0 \
---data_path /path/to/dataset/CIFAR-10/ \
---eval_data_path /path/to/dataset/CIFAR-10/val \
-```
-This should give 
-```
-* Acc@1 95.700 Acc@5 99.890 loss 0.210
+```bash
+python main.py --model convnext_tiny_unpruned_cifar10 --eval true   --resume /path/to/checkpoint/cifar10/unpruned_checkpoint-best.pth   --input_size 224 --drop_path 0   --data_path /path/to/dataset/CIFAR-10/   --eval_data_path /path/to/dataset/CIFAR-10/val
 ```
 
-
+Expected result:  
 ```
-python main.py --model convnext_tiny_21M_pruned_cifar10 --eval true \
---resume /path/to/checkpoint/cifar10/21M_checkpoint-best.pth \
---input_size 224 --drop_path 0 \
---data_path /path/to/dataset/CIFAR-10/ \
---eval_data_path /path/to/dataset/CIFAR-10/val \
-```
-This should give 
-```
-* Acc@1 95.060 Acc@5 99.290 loss 0.254
+* Acc@1 95.70  Acc@5 99.89  loss 0.210
 ```
 
-```
-python main.py --model convnext_tiny_16M_pruned_cifar10 --eval true \
---resume /path/to/checkpoint/cifar10/16M_checkpoint-best.pth \
---input_size 224 --drop_path 0 \
---data_path /path/to/dataset/CIFAR-10/ \
---eval_data_path /path/to/dataset/CIFAR-10/val \
-```
-This should give 
-```
-* Acc@1 95.030 Acc@5 99.140 loss 0.260
+Other pruned variants:
+
+| Model                              | #Params | Top-1 Acc. | Top-5 Acc. | Loss  |
+|-----------------------------------|---------|------------|------------|-------|
+| convnext_tiny_unpruned_cifar10    | 28M     | 95.70      | 99.89      | 0.210 |
+| convnext_tiny_21M_pruned_cifar10  | 21M     | 95.06      | 99.29      | 0.254 |
+| convnext_tiny_16M_pruned_cifar10  | 16M     | 95.03      | 99.14      | 0.260 |
+| convnext_tiny_13M_pruned_cifar10  | 13M     | 95.13      | 99.33      | 0.249 |
+| convnext_tiny_3M_pruned_cifar10   | 3M      | 90.24      | 99.56      | 0.364 |
+
+---
+
+### Evaluation on **Tiny ImageNet**
+Example (unpruned model):
+
+```bash
+python main.py --model convnext_tiny_unpruned_tinyimagenet --eval true   --resume /path/to/checkpoint/tinyimage/unpruned_checkpoint-best.pth   --input_size 224 --drop_path 0   --data_path /path/to/dataset/TinyImageNet_dataset/   --eval_data_path /path/to/dataset/TinyImageNet_dataset/val
 ```
 
+Expected result:  
 ```
-python main.py --model convnext_tiny_13M_pruned_cifar10 --eval true \
---resume /path/to/checkpoint/cifar10/13M_checkpoint-best.pth \
---input_size 224 --drop_path 0 \
---data_path /path/to/dataset/CIFAR-10/ \
---eval_data_path /path/to/dataset/CIFAR-10/val \
-```
-This should give 
-```
-* Acc@1 95.130 Acc@5 99.330 loss 0.249
+* Acc@1 78.17  Acc@5 93.51  loss 0.916
 ```
 
-```
-python main.py --model convnext_tiny_3M_pruned_cifar10 --eval true \
---resume /path/to/checkpoint/cifar10/3M_checkpoint-best.pth \
---input_size 224 --drop_path 0 \
---data_path /path/to/dataset/CIFAR-10/ \
---eval_data_path /path/to/dataset/CIFAR-10/val \\
-```
-This should give 
-```
-* Acc@1 90.240 Acc@5 99.560 loss 0.364
-```
+Other pruned variants:
 
+| Model                                   | #Params | Top-1 Acc. | Top-5 Acc. | Loss  |
+|----------------------------------------|---------|------------|------------|-------|
+| convnext_tiny_unpruned_tinyimagenet    | 28M     | 78.17      | 93.51      | 0.916 |
+| convnext_tiny_21M_pruned_tinyimagenet  | 21M     | 75.41      | 90.22      | 1.163 |
+| convnext_tiny_21M_pruned_tinyimagenet* | 21M     | 74.23      | 88.55      | 1.276 |
+| convnext_tiny_16M_pruned_tinyimagenet  | 16M     | 73.94      | 88.62      | 1.282 |
+| convnext_tiny_13M_pruned_tinyimagenet  | 13M     | 73.09      | 88.13      | 1.337 |
+| convnext_tiny_3M_pruned_tinyimagenet   | 3M      | 59.94      | 82.28      | 1.704 |
 
-## Evaluation on Tiny ImageNet dataset for various pruned models, unpruned models
-```
-python main.py --model convnext_tiny_unpruned_tinyimagenet --eval true \
---resume /path/to/checkpoint/tinyimage/unpruned_checkpoint-best.pth \
---input_size 224 --drop_path 0 \
---data_path /path/to/dataset/TinyImageNet_dataset/ \
---eval_data_path /path/to/dataset/TinyImageNet_dataset/val \
-```
+> *Two different 21M checkpoints are provided (`21M_mixup_checkpoint-best.pth` and `21M_checkpoint-best.pth`).  
 
-This should give 
-```
-* Acc@1 78.170 Acc@5 93.510 loss 0.916
-```
+---
 
-```
-python main.py --model convnext_tiny_21M_pruned_tinyimagenet --eval true \
---resume /path/to/checkpoint//tinyimage/21M_mixup_checkpoint-best.pth \
---input_size 224 --drop_path 0 \
---data_path /path/to/dataset/TinyImageNet_dataset/ \
---eval_data_path /path/to/dataset/TinyImageNet_dataset/val \
-```
+## 🚀 Training
+Training and fine-tuning instructions are provided in [TRAINING.md](TRAINING.md), following the methodology from the official [ConvNeXt repository](https://github.com/facebookresearch/ConvNeXt/tree/main).  
 
-This should give 
-```
-* Acc@1 75.410 Acc@5 90.220 loss 1.163
-```
+---
 
-```
-python main.py --model convnext_tiny_21M_pruned_tinyimagenet --eval true \
---resume /path/to/checkpoint//tinyimage/21M_checkpoint-best.pth \
---input_size 224 --drop_path 0 \
---data_path /path/to/dataset/TinyImageNet_dataset/ \
---eval_data_path /path/to/dataset/TinyImageNet_dataset/val \
-```
+## ✂️ Pruning
+Details of the pruning algorithm can be found in [Pruning/pruning_readme.md](pruning.md).  
 
-This should give 
-```
-* Acc@1 74.230 Acc@5 88.550 loss 1.276
-```
+---
 
-```
-python main.py --model convnext_tiny_16M_pruned_tinyimagenet --eval true \
---resume /path/to/checkpoint//tinyimage/16M_checkpoint-best.pth \
---input_size 224 --drop_path 0 \
---data_path /path/to/dataset/TinyImageNet_dataset/ \
---eval_data_path /path/to/dataset/TinyImageNet_dataset/val \
-```
+## 🙏 Acknowledgement
+This repository builds upon the excellent [ConvNeXt repository](https://github.com/facebookresearch/ConvNeXt).  
 
-This should give 
-```
-* Acc@1 73.940 Acc@5 88.620 loss 1.282
-```
+---
 
+## 📖 Citation
+If you find this repository useful, please cite:  
 
-
-```
-python main.py --model convnext_tiny_13M_pruned_tinyimagenet --eval true \
---resume /path/to/checkpoint//tinyimage/13M_checkpoint-best.pth \
---input_size 224 --drop_path 0 \
---data_path /path/to/dataset/TinyImageNet_dataset/ \
---eval_data_path /path/to/dataset/TinyImageNet_dataset/val \
-```
-
-This should give 
-```
-* Acc@1 73.090 Acc@5 88.130 loss 1.337
-```
-
-```
-python main.py --model convnext_tiny_3M_pruned_tinyimagenet --eval true \
---resume /path/to/checkpoint//tinyimage/3M_checkpoint-best.pth \
---input_size 224 --drop_path 0 \
---data_path /path/to/dataset/TinyImageNet_dataset/ \
---eval_data_path /path/to/dataset/TinyImageNet_dataset/val \
-```
-
-This should give 
-```
-* Acc@1 59.940 Acc@5 82.280 loss 1.704
-```
-
-
-
-
-## Training
-See [TRAINING.md](TRAINING.md) for training and fine-tuning instructions, as suggested by [ConvNeXt](https://github.com/facebookresearch/ConvNeXt/tree/main?tab=readme-ov-file) repository.
-
-## Pruning
-For pruning algorithm, see [Pruning/pruning_readme.md](pruning.md)
-
-
-
-## Acknowledgement
-This repository is built using the [ConvNeXt](https://github.com/facebookresearch/ConvNeXt/tree/main?tab=readme-ov-file) repository. 
-
-## Citation
-If you find this repository helpful, please consider citing:
-```
+```bibtex
 @ARTICLE{10966165,
   author={Singh, Arshdeep and Plumbley, Mark D.},
-  journal={IEEE Transactions on Audio, Speech and Language Processing}, 
+  journal={IEEE/ACM Transactions on Audio, Speech and Language Processing}, 
   title={Efficient CNNs via Passive Filter Pruning}, 
   year={2025},
   volume={33},
-  number={},
   pages={1763-1774},
-  keywords={Passive filters;Active filters;Information filters;Memory management;Convolutional codes;Training;Convolution;Computational modeling;Transformers;Tagging;Acoustic scene classification;audio tagging;CNNs;ConvNeXt;DCASE;image classification;low-complexity;PANNs;pruning filters;ResNet50;VGGish},
-  doi={10.1109/TASLPRO.2025.3561589}}
+  doi={10.1109/TASLPRO.2025.3561589},
+  keywords={Passive filters; Filter pruning; CNNs; ConvNeXt; DCASE; image classification; low-complexity; PANNs; ResNet50; VGGish}
+}
 ```
-
