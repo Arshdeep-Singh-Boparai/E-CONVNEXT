@@ -190,11 +190,15 @@ This repository is built using the [ConvNeXt](https://github.com/facebookresearc
 ## Citation
 If you find this repository helpful, please consider citing:
 ```
-@Article{Singh2023efficient,
-  author  = {Arshdeep Singh, Mark D Plumbley},
-  title   = {Efficient CNNs via passive filter pruning},
-  journal = {arXiv preprint arXiv:2304.02319},
-  year    = {2023},
-}
+@ARTICLE{10966165,
+  author={Singh, Arshdeep and Plumbley, Mark D.},
+  journal={IEEE Transactions on Audio, Speech and Language Processing}, 
+  title={Efficient CNNs via Passive Filter Pruning}, 
+  year={2025},
+  volume={33},
+  number={},
+  pages={1763-1774},
+  keywords={Passive filters;Active filters;Information filters;Memory management;Convolutional codes;Training;Convolution;Computational modeling;Transformers;Tagging;Acoustic scene classification;audio tagging;CNNs;ConvNeXt;DCASE;image classification;low-complexity;PANNs;pruning filters;ResNet50;VGGish},
+  doi={10.1109/TASLPRO.2025.3561589}}
 ```
 
