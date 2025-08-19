@@ -180,7 +180,7 @@ This should give
 See [TRAINING.md](TRAINING.md) for training and fine-tuning instructions, as suggested by [ConvNeXt](https://github.com/facebookresearch/ConvNeXt/tree/main?tab=readme-ov-file) repository.
 
 ## Pruning
-For pruning algorithm, see [pruning.md](pruning.md) [will be updated soon]
+For pruning algorithm, see [Pruning/pruning_readme.md](pruning.md)
 
 
 
