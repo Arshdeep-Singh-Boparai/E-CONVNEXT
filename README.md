@@ -88,7 +88,7 @@ Training and fine-tuning instructions are provided in [TRAINING.md](TRAINING.md)
 ---
 
 ## ✂️ Pruning
-Details of the pruning algorithm can be found in [Pruning/pruning_readme.md](pruning.md).  
+Details of the pruning algorithm can be found in [Pruning/readme.md](pruning.md).  
 
 ---
 
